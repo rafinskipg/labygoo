@@ -594,12 +594,47 @@
         "name": "Box",
         "ref": "entities/Box_9.entity"
     },
+     "entities/Floor.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/floor.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    90,
+                    0,
+                    0
+                ],
+                "scale": [
+                    36,
+                    36,
+                    1
+                ],
+                "translation": [
+                    -8,
+                    -1,
+                    5
+                ]
+            }
+        },
+        "name": "Box",
+        "ref": "entities/Floor.entity"
+    },
     "entities/Camera.entity": {
         "components": {
             "camera": {
                 "aspect": 1,
                 "far": 1000,
-                "fov": 45,
+                "fov": 53,
                 "lockedRatio": false,
                 "near": 1,
                 "projectionMode": 0,
@@ -608,7 +643,7 @@
             "transform": {
                 "rotation": [
                     -90,
-                    90,
+                    0,
                     0
                 ],
                 "scale": [
@@ -618,7 +653,7 @@
                 ],
                 "translation": [
                     -8.53421401977539,
-                    49.8426399230957,
+                    39.8426399230957,
                     5.330463409423828
                 ]
             }
@@ -626,31 +661,14 @@
         "name": "Camera",
         "ref": "entities/Camera.entity"
     },
-    "entities/DefaultToolCamera.entity": {
-        "components": {
-            "camera": {
-                "aspect": 1.1096866096866096,
-                "far": 20000,
-                "fov": 45,
-                "near": 0.4
-            },
-            "script": {
-                "scriptRefs": [
-                    "scripts/DefaultToolCameraScript.script"
-                ]
-            }
-        },
-        "name": "DefaultToolCamera.entity",
-        "ref": "entities/DefaultToolCamera.entity"
-    },
     "entities/PointLight.entity": {
         "components": {
             "light": {
                 "attenuate": true,
                 "color": [
-                    0.34545454545454546,
-                    1,
-                    0.8786115702479338,
+                    0.9818181818181818,
+                    0.9818181818181818,
+                    0.9818181818181818,
                     1
                 ],
                 "direction": [
@@ -658,7 +676,7 @@
                     0,
                     0
                 ],
-                "intensity": 4.09,
+                "intensity": 2.51,
                 "lightCookie": null,
                 "range": 150,
                 "shadowCaster": false,
@@ -691,9 +709,9 @@
                     0
                 ],
                 "scale": [
-                    1,
-                    1,
-                    1
+                    1.1639376878738403,
+                    2.1837399005889893,
+                    2.704106092453003
                 ],
                 "translation": [
                     -4.913684844970703,
@@ -3030,6 +3048,11 @@
                 "layersRef": "goon_bind/animations/Animations.animation",
                 "poseRef": "goon_bind/skeletons/Skeleton.skeleton"
             },
+            "stateMachine": {
+                "machineRefs": [
+                    "goon_bind/states/Machine.machine"
+                ]
+            },
             "transform": {
                 "rotation": [
                     0,
@@ -3222,7 +3245,8 @@
             "goon_bind/animations/Goon_animation_idle.clip",
             "GOO_ASSET_LIBRARY/goon_bind/binaries/1383303928_goon_animation_idle_Goon_animation_idle.bin",
             "goon_bind/animations/Goon_animation_walk.clip",
-            "GOO_ASSET_LIBRARY/goon_bind/binaries/1383303764_goon_animation_walk_Goon_animation_walk.bin"
+            "GOO_ASSET_LIBRARY/goon_bind/binaries/1383303764_goon_animation_walk_Goon_animation_walk.bin",
+            "goon_bind/states/Machine.machine"
         ],
         "name": "The Goon",
         "ref": "goon_bind/goon_bind.group",
@@ -4154,6 +4178,121 @@
         "name": "Skeleton",
         "ref": "goon_bind/skeletons/Skeleton.skeleton"
     },
+    "goon_bind/states/Machine.machine": {
+        "id": "MjExNzA2MDEwOQ==",
+        "initialState": "NzYxMzQzODYw",
+        "name": "MOVE",
+        "ref": "goon_bind/states/Machine.machine",
+        "states": [
+            {
+                "actions": [
+                    {
+                        "id": "MTMyMTkyMjkzOA==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_idle",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTk3MTU1MjE1Ng==",
+                        "name": "Mouse Down",
+                        "options": {
+                            "transitions": {
+                                "middleMouseDown": "MTgwNDI1OTk4NA==",
+                                "mouseLeftDown": "LTU2MDA4ODIwNw==",
+                                "rightMouseDown": "LTEyNjM1OTEyMQ=="
+                            }
+                        },
+                        "type": "Mouse Down"
+                    }
+                ],
+                "id": "NzYxMzQzODYw",
+                "machineRefs": [],
+                "name": "IDLE",
+                "transitions": [
+                    {
+                        "id": "LTU2MDA4ODIwNw==",
+                        "key": "mouseLeftDown",
+                        "name": "Left mouse down"
+                    },
+                    {
+                        "id": "MTgwNDI1OTk4NA==",
+                        "key": "middleMouseDown",
+                        "name": "Middle mouse down"
+                    },
+                    {
+                        "id": "LTEyNjM1OTEyMQ==",
+                        "key": "rightMouseDown",
+                        "name": "Right mouse down"
+                    }
+                ]
+            },
+            {
+                "actions": [
+                    {
+                        "id": "LTIwMTk0ODc2MDg=",
+                        "name": "Mouse Up",
+                        "options": {
+                            "transitions": {
+                                "middleMouseUp": "NjA3MTU4Nzg1",
+                                "mouseLeftUp": "LTE3NTcxODk0MDY=",
+                                "rightMouseUp": "LTEzMjM0NjAzMjA="
+                            }
+                        },
+                        "type": "Mouse Up"
+                    },
+                    {
+                        "id": "LTQwNDk3ODg2Ng==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_run",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "LTExODQ1ODU0Mg==",
+                        "name": "Move",
+                        "options": {
+                            "everyFrame": true,
+                            "oriented": true,
+                            "relative": true,
+                            "transitions": {},
+                            "translation": [
+                                0,
+                                0,
+                                0.2
+                            ]
+                        },
+                        "type": "Move"
+                    }
+                ],
+                "id": "LTExOTM0MzU5Mg==",
+                "machineRefs": [],
+                "name": "RUN",
+                "transitions": [
+                    {
+                        "id": "LTE3NTcxODk0MDY=",
+                        "key": "mouseLeftUp",
+                        "name": "Left mouse up",
+                        "targetState": "NzYxMzQzODYw"
+                    },
+                    {
+                        "id": "NjA3MTU4Nzg1",
+                        "key": "middleMouseUp",
+                        "name": "Middle mouse up"
+                    },
+                    {
+                        "id": "LTEzMjM0NjAzMjA=",
+                        "key": "rightMouseUp",
+                        "name": "Right mouse up"
+                    }
+                ]
+            }
+        ]
+    },
     "goon_bind/textures/goon_glow.texture": {
         "anisotropy": 1,
         "fileName": "GOO_ASSET_LIBRARY/goon_bind/images/goon_glow.jpg",
@@ -4264,9 +4403,18 @@
             "blendSrc": "SrcAlphaFactor",
             "blending": "NoBlending"
         },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": true
+        },
         "name": "floor",
         "ref": "materials/floor.material",
-        "renderQueue": -1,
+        "renderQueue": 1000,
         "shaderRef": "GOO_ENGINE_SHADERS/uber",
         "texturesMapping": {
             "DIFFUSE_MAP": {
@@ -4337,18 +4485,81 @@
             }
         }
     },
+    "posteffects/Bleach.posteffect": {
+        "enabled": false,
+        "name": "Bleach",
+        "options": {
+            "opacity": 1
+        },
+        "ref": "posteffects/Bleach.posteffect"
+    },
+    "posteffects/Bloom.posteffect": {
+        "enabled": false,
+        "name": "Bloom",
+        "options": {
+            "brightness": 0,
+            "contrast": 0,
+            "opacity": 100,
+            "size": 2
+        },
+        "ref": "posteffects/Bloom.posteffect"
+    },
+    "posteffects/Contrast.posteffect": {
+        "enabled": false,
+        "name": "Contrast",
+        "options": {
+            "brightness": 0,
+            "contrast": 0
+        },
+        "ref": "posteffects/Contrast.posteffect"
+    },
+    "posteffects/Grain.posteffect": {
+        "enabled": false,
+        "name": "Grain",
+        "options": {
+            "nIntensity": 50,
+            "sCount": 1024,
+            "sIntensity": 50
+        },
+        "ref": "posteffects/Grain.posteffect"
+    },
+    "posteffects/RgbShift.posteffect": {
+        "enabled": false,
+        "name": "RgbShift",
+        "options": {
+            "amount": 0.005,
+            "angle": 0
+        },
+        "ref": "posteffects/RgbShift.posteffect"
+    },
+    "posteffects/Sepia.posteffect": {
+        "enabled": false,
+        "name": "Sepia",
+        "options": {
+            "amount": 100
+        },
+        "ref": "posteffects/Sepia.posteffect"
+    },
+    "posteffects/Vignette.posteffect": {
+        "enabled": false,
+        "name": "Vignette",
+        "options": {
+            "darkness": 1.5,
+            "offset": 1
+        },
+        "ref": "posteffects/Vignette.posteffect"
+    },
     "project.project": {
         "backgroundColor": [
-            0.75,
-            0.76,
-            0.78,
+            0,
+            0,
+            0,
             1
         ],
         "created": "2013-12-23T16:17:40.584089",
         "deleted": false,
         "edit": [],
         "entityRefs": [
-            "entities/DefaultToolCamera.entity",
             "entities/Box.entity",
             "entities/Box_0.entity",
             "entities/Box_1.entity",
@@ -4366,6 +4577,7 @@
             "entities/Box_13.entity",
             "entities/Box_14.entity",
             "entities/Box_15.entity",
+            "entities/Floor.entity",
             "goon_bind/entities/joints01.entity",
             "goon_bind/entities/globalMove01.entity",
             "goon_bind/entities/goon_mesh_0.entity",
@@ -4378,9 +4590,9 @@
             "entities/default_light_2.entity"
         ],
         "fogColor": [
-            1,
-            1,
-            1
+            0.8636363636363636,
+            0.14917355371900826,
+            0.6168219383921861
         ],
         "fogFar": 1000,
         "fogNear": 0,
@@ -4395,35 +4607,55 @@
         ],
         "id": "aU0ewj0TRWu58GPpMFyQ_w",
         "licenseType": "CC0",
-        "modified": "2013-12-23T16:39:28.673948",
+        "modified": "2013-12-23T22:41:06.699215",
         "name": "Mapa",
         "originalLicenseType": null,
         "own": [
             "ACS9NTMXROun2tU4AgEoXA"
         ],
         "parent": null,
+        "posteffectRefs": [
+            "posteffects/Sepia.posteffect",
+            "posteffects/Bloom.posteffect",
+            "posteffects/Grain.posteffect",
+            "posteffects/Contrast.posteffect",
+            "posteffects/RgbShift.posteffect",
+            "posteffects/Vignette.posteffect",
+            "posteffects/Bleach.posteffect"
+        ],
         "public": true,
         "ref": "project.project",
         "skybox": {
+            "attribution": {
+                "link": "http://www.3delyvisions.com/",
+                "name": "3DElyvisions"
+            },
             "environmentType": 1,
             "imageUrls": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/rightsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/leftsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/topsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/botsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/frontsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/backsh.jpg"
             ],
+            "ref": "environment/Hills.skybox",
             "rotation": 0,
             "shape": "Box"
         },
         "useFog": false,
-        "view": []
+        "view": [],
+        "weather": {
+            "snow": {
+                "enabled": false,
+                "height": 25,
+                "rate": 10,
+                "velocity": 10
+            }
+        }
     },
     "root.group": {
         "libraryRefs": [
-            "scripts/DefaultToolCameraScript.script",
-            "entities/DefaultToolCamera.entity",
             "entities/Box.entity",
             "images/floor.jpg",
             "textures/floor.texture",
@@ -4444,50 +4676,21 @@
             "entities/Box_13.entity",
             "entities/Box_14.entity",
             "entities/Box_15.entity",
+            "entities/Floor.entity",
             "entities/PointLight.entity",
             "entities/Camera.entity",
+            "posteffects/Sepia.posteffect",
+            "posteffects/Bloom.posteffect",
+            "posteffects/Grain.posteffect",
+            "posteffects/Contrast.posteffect",
+            "posteffects/RgbShift.posteffect",
+            "posteffects/Vignette.posteffect",
+            "posteffects/Bleach.posteffect",
             "entities/default_light.entity",
             "entities/default_light_2.entity"
         ],
         "name": "root",
         "ref": "root.group"
-    },
-    "scripts/DefaultToolCameraScript.script": {
-        "className": "OrbitNPanControlScript",
-        "name": "DefaultToolCameraScript.script",
-        "options": {
-            "clampAzimuth": false,
-            "detailZoom": 0.15,
-            "dragOnly": true,
-            "invertedWheel": true,
-            "invertedX": false,
-            "invertedY": false,
-            "lookAtPoint": [
-                -7.8581976890563965,
-                1.9436110258102417,
-                5.068925857543945
-            ],
-            "maxAscent": 1.5699236621688994,
-            "maxAzimuth": 4.71238898038469,
-            "maxZoomDistance": 6000,
-            "minAscent": -1.5699236621688994,
-            "minAzimuth": 1.5707963267948966,
-            "minZoomDistance": 0.1,
-            "spherical": [
-                182.17306518554688,
-                5.603987216949463,
-                0.5249236822128296
-            ],
-            "turnSpeedHorizontal": 0.005,
-            "turnSpeedVertical": 0.005,
-            "worldUpVector": [
-                0,
-                1,
-                0
-            ],
-            "zoomSpeed": 0.3
-        },
-        "ref": "scripts/DefaultToolCameraScript.script"
     },
     "textures/floor.texture": {
         "anisotropy": 1,
