@@ -8,9 +8,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -44,29 +42,30 @@
                 "cullMode": "Dynamic",
                 "hidden": false,
                 "materialRefs": [
-                    "materials/floor.material"
+                    "materials/wood.material"
                 ],
                 "receiveShadows": true
             },
             "transform": {
+                "parentRef": "entities/Group.entity",
                 "rotation": [
                     0,
                     0,
                     0
                 ],
                 "scale": [
-                    25,
+                    30,
                     4,
                     1
                 ],
                 "translation": [
-                    -2.3038558959960938,
-                    1.9436111450195312,
-                    20.187902450561523
+                    -9.841375350952148,
+                    1.9435958862304688,
+                    20.51045799255371
                 ]
             }
         },
-        "name": "Box",
+        "name": "bottom",
         "ref": "entities/Box_0.entity"
     },
     "entities/Box_1.entity": {
@@ -78,9 +77,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -113,9 +110,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -148,9 +143,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -183,9 +176,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -218,9 +209,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -253,9 +242,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -288,9 +275,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -314,7 +299,7 @@
         "name": "Box",
         "ref": "entities/Box_15.entity"
     },
-    "entities/Box_2.entity": {
+    "entities/Box_16.entity": {
         "components": {
             "meshData": {
                 "shape": "Box"
@@ -324,8 +309,147 @@
                 "cullMode": "Dynamic",
                 "hidden": false,
                 "materialRefs": [
-                    "materials/floor.material"
+                    "materials/wood.material"
                 ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    30,
+                    4,
+                    1
+                ],
+                "translation": [
+                    9.49700927734375,
+                    1.9436111450195312,
+                    4.359846115112305
+                ]
+            }
+        },
+        "name": "right",
+        "ref": "entities/Box_16.entity"
+    },
+    "entities/Box_17.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    25,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -7.228714466094971,
+                    1.9436111450195312,
+                    -13.564252853393555
+                ]
+            }
+        },
+        "name": "Box",
+        "ref": "entities/Box_17.entity"
+    },
+    "entities/Box_18.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    30,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -9.991284370422363,
+                    1.9435958862304688,
+                    -11.952306747436523
+                ]
+            }
+        },
+        "name": "top",
+        "ref": "entities/Box_18.entity"
+    },
+    "entities/Box_19.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_0.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    20,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -25.22025489807129,
+                    1.9435806274414062,
+                    3.9443869590759277
+                ]
+            }
+        },
+        "name": "left",
+        "ref": "entities/Box_19.entity"
+    },
+    "entities/Box_2.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -349,7 +473,7 @@
         "name": "Box",
         "ref": "entities/Box_2.entity"
     },
-    "entities/Box_3.entity": {
+    "entities/Box_20.entity": {
         "components": {
             "meshData": {
                 "shape": "Box"
@@ -359,11 +483,297 @@
                 "cullMode": "Dynamic",
                 "hidden": false,
                 "materialRefs": [
-                    "materials/floor.material"
+                    "materials/wood.material"
                 ],
                 "receiveShadows": true
             },
             "transform": {
+                "parentRef": "entities/Group_0.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    20,
+                    4,
+                    1
+                ],
+                "translation": [
+                    5.405303955078125,
+                    1.9436111450195312,
+                    3.878615140914917
+                ]
+            }
+        },
+        "name": "right",
+        "ref": "entities/Box_20.entity"
+    },
+    "entities/Box_21.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    20,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -10.136457443237305,
+                    1.9436111450195312,
+                    -7.040887355804443
+                ]
+            }
+        },
+        "name": "top",
+        "ref": "entities/Box_21.entity"
+    },
+    "entities/Box_22.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    20,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -10.26264762878418,
+                    1.9436111450195312,
+                    14.701042175292969
+                ]
+            }
+        },
+        "name": "bottom",
+        "ref": "entities/Box_22.entity"
+    },
+    "entities/Box_23.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    15,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -69.22380065917969,
+                    1.9435958862304688,
+                    14.99528694152832
+                ]
+            }
+        },
+        "name": "leftH",
+        "ref": "entities/Box_23.entity"
+    },
+    "entities/Box_24.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood_0.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    15,
+                    4,
+                    1
+                ],
+                "translation": [
+                    7.122088432312012,
+                    2.0393142700195312,
+                    15.413939476013184
+                ]
+            }
+        },
+        "name": "rightH",
+        "ref": "entities/Box_24.entity"
+    },
+    "entities/Box_25.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    15,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -21.95131492614746,
+                    1.9436111450195312,
+                    9.569023132324219
+                ]
+            }
+        },
+        "name": "top",
+        "ref": "entities/Box_25.entity"
+    },
+    "entities/Box_26.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_4.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -29.561180114746094,
+                    1.9436264038085938,
+                    -20.860698699951172
+                ]
+            }
+        },
+        "name": "topV",
+        "ref": "entities/Box_26.entity"
+    },
+    "entities/Box_27.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_5.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -29.702409744262695,
+                    1.940000057220459,
+                    51.57805633544922
+                ]
+            }
+        },
+        "name": "bottomV",
+        "ref": "entities/Box_27.entity"
+    },
+    "entities/Box_28.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_3.entity",
                 "rotation": [
                     0,
                     90,
@@ -375,14 +785,409 @@
                     1
                 ],
                 "translation": [
-                    -25.412540435791016,
-                    1.9436111450195312,
-                    5.58384370803833
+                    -60.84623718261719,
+                    1.940000057220459,
+                    15.586702346801758
                 ]
             }
         },
-        "name": "Box",
+        "name": "leftV",
+        "ref": "entities/Box_28.entity"
+    },
+    "entities/Box_29.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_1.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    30,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -0.7988042831420898,
+                    1.9435958862304688,
+                    14.850378036499023
+                ]
+            }
+        },
+        "name": "rightV",
+        "ref": "entities/Box_29.entity"
+    },
+    "entities/Box_3.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    30,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -29.471858978271484,
+                    1.9436111450195312,
+                    4.451689720153809
+                ]
+            }
+        },
+        "name": "left",
         "ref": "entities/Box_3.entity"
+    },
+    "entities/Box_30.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_4.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    40,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -29.90433692932129,
+                    2.0062942504882812,
+                    -15.345394134521484
+                ]
+            }
+        },
+        "name": "topH",
+        "ref": "entities/Box_30.entity"
+    },
+    "entities/Box_31.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_5.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    40,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -29.971126556396484,
+                    2.352893829345703,
+                    45.71936798095703
+                ]
+            }
+        },
+        "name": "bottomH",
+        "ref": "entities/Box_31.entity"
+    },
+    "entities/Box_32.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_5.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -49.42989730834961,
+                    1.940000057220459,
+                    40.32746124267578
+                ]
+            }
+        },
+        "name": "leftBorder",
+        "ref": "entities/Box_32.entity"
+    },
+    "entities/Box_33.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_4.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -10.538455963134766,
+                    1.940000057220459,
+                    -9.775285720825195
+                ]
+            }
+        },
+        "name": "leftBorder",
+        "ref": "entities/Box_33.entity"
+    },
+    "entities/Box_34.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_5.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -10.180025100708008,
+                    1.940000057220459,
+                    40.51216506958008
+                ]
+            }
+        },
+        "name": "rightBorder",
+        "ref": "entities/Box_34.entity"
+    },
+    "entities/Box_35.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_4.entity",
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "scale": [
+                    10,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -49.30904006958008,
+                    1.940000057220459,
+                    -9.840574264526367
+                ]
+            }
+        },
+        "name": "rightBorder",
+        "ref": "entities/Box_35.entity"
+    },
+    "entities/Box_36.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood_0.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_6.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    15,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -30.800403594970703,
+                    1.9435958862304688,
+                    6.176362991333008
+                ]
+            }
+        },
+        "name": "centerBottom",
+        "ref": "entities/Box_36.entity"
+    },
+    "entities/Box_37.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/wood_0.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_6.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    15,
+                    4,
+                    1
+                ],
+                "translation": [
+                    -30.86046600341797,
+                    1.9435958862304688,
+                    23.43369483947754
+                ]
+            }
+        },
+        "name": "centerTop",
+        "ref": "entities/Box_37.entity"
+    },
+    "entities/Box_38.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Box"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/checker_0.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    150,
+                    0,
+                    150
+                ],
+                "translation": [
+                    -30.834705352783203,
+                    0,
+                    18.846221923828125
+                ]
+            }
+        },
+        "name": "floor",
+        "ref": "entities/Box_38.entity"
     },
     "entities/Box_4.entity": {
         "components": {
@@ -393,9 +1198,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -428,9 +1231,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -463,9 +1264,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -498,9 +1297,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -533,9 +1330,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -568,9 +1363,7 @@
                 "castShadows": true,
                 "cullMode": "Dynamic",
                 "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
+                "materialRefs": [],
                 "receiveShadows": true
             },
             "transform": {
@@ -594,48 +1387,13 @@
         "name": "Box",
         "ref": "entities/Box_9.entity"
     },
-     "entities/Floor.entity": {
-        "components": {
-            "meshData": {
-                "shape": "Box"
-            },
-            "meshRenderer": {
-                "castShadows": true,
-                "cullMode": "Dynamic",
-                "hidden": false,
-                "materialRefs": [
-                    "materials/floor.material"
-                ],
-                "receiveShadows": true
-            },
-            "transform": {
-                "rotation": [
-                    90,
-                    0,
-                    0
-                ],
-                "scale": [
-                    36,
-                    36,
-                    1
-                ],
-                "translation": [
-                    -8,
-                    -1,
-                    5
-                ]
-            }
-        },
-        "name": "Box",
-        "ref": "entities/Floor.entity"
-    },
     "entities/Camera.entity": {
         "components": {
             "camera": {
                 "aspect": 1,
                 "far": 1000,
-                "fov": 53,
-                "lockedRatio": false,
+                "fov": 22,
+                "lockedRatio": true,
                 "near": 1,
                 "projectionMode": 0,
                 "size": 100
@@ -643,6 +1401,39 @@
             "transform": {
                 "rotation": [
                     -90,
+                    90,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    -7.08384895324707,
+                    -839.051513671875,
+                    52.403602600097656
+                ]
+            }
+        },
+        "hidden": false,
+        "name": "Camera",
+        "ref": "entities/Camera.entity"
+    },
+    "entities/Camera_0.entity": {
+        "components": {
+            "camera": {
+                "aspect": 1,
+                "far": 1000,
+                "fov": 45,
+                "lockedRatio": false,
+                "near": 1,
+                "projectionMode": 0,
+                "size": 100
+            },
+            "transform": {
+                "rotation": [
+                    -43.53285612795283,
                     0,
                     0
                 ],
@@ -652,23 +1443,290 @@
                     1
                 ],
                 "translation": [
-                    -8.53421401977539,
-                    39.8426399230957,
-                    5.330463409423828
+                    -30.707138061523438,
+                    118.35986328125,
+                    153.3166961669922
                 ]
             }
         },
+        "hidden": true,
         "name": "Camera",
-        "ref": "entities/Camera.entity"
+        "ref": "entities/Camera_0.entity"
+    },
+    "entities/Cone.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Cone",
+                "shapeOptions": {
+                    "height": 2,
+                    "radialSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    -106.6782111368146,
+                    0,
+                    0
+                ],
+                "scale": [
+                    3,
+                    2,
+                    3
+                ],
+                "translation": [
+                    -33.32720184326172,
+                    0.18035125732421875,
+                    -24.281005859375
+                ]
+            }
+        },
+        "hidden": true,
+        "name": "Cone",
+        "ref": "entities/Cone.entity"
+    },
+    "entities/DefaultToolCamera.entity": {
+        "components": {
+            "camera": {
+                "aspect": 1.1587485515643106,
+                "far": 20000,
+                "fov": 45,
+                "near": 0.4
+            },
+            "script": {
+                "scriptRefs": [
+                    "scripts/DefaultToolCameraScript.script"
+                ]
+            }
+        },
+        "name": "DefaultToolCamera.entity",
+        "ref": "entities/DefaultToolCamera.entity"
+    },
+    "entities/Group.entity": {
+        "components": {
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    3,
+                    1,
+                    3.5
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "outsideWalls",
+        "ref": "entities/Group.entity"
+    },
+    "entities/Group_0.entity": {
+        "components": {
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    3.0093882083892822,
+                    1,
+                    4
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "firstLvlWalls",
+        "ref": "entities/Group_0.entity"
+    },
+    "entities/Group_1.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "entities/Group_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1.0034434795379639,
+                    1.0034434795379639
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "rightGroup",
+        "ref": "entities/Group_1.entity"
+    },
+    "entities/Group_2.entity": {
+        "components": {
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "secondLvlWalls",
+        "ref": "entities/Group_2.entity"
+    },
+    "entities/Group_3.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "entities/Group_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.9687378406524658,
+                    0.9964346885681152,
+                    0.9955165982246399
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "leftGroup",
+        "ref": "entities/Group_3.entity"
+    },
+    "entities/Group_4.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "entities/Group_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "topGroup",
+        "ref": "entities/Group_4.entity"
+    },
+    "entities/Group_5.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "entities/Group_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "bottomGroup",
+        "ref": "entities/Group_5.entity"
+    },
+    "entities/Group_6.entity": {
+        "components": {
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "centerWalls",
+        "ref": "entities/Group_6.entity"
+    },
+    "entities/Group_7.entity": {
+        "components": {
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    -0.18600845336914062,
+                    1.8549423217773438,
+                    1.4133453369140625
+                ]
+            }
+        },
+        "name": "powers",
+        "ref": "entities/Group_7.entity"
     },
     "entities/PointLight.entity": {
         "components": {
             "light": {
                 "attenuate": true,
                 "color": [
-                    0.9818181818181818,
-                    0.9818181818181818,
-                    0.9818181818181818,
+                    0.8545454545454545,
+                    0.8119453042824943,
+                    0.4505785123966942,
                     1
                 ],
                 "direction": [
@@ -676,7 +1734,7 @@
                     0,
                     0
                 ],
-                "intensity": 2.51,
+                "intensity": 4.32,
                 "lightCookie": null,
                 "range": 150,
                 "shadowCaster": false,
@@ -699,8 +1757,161 @@
                         0
                     ]
                 },
-                "specularIntensity": 1,
+                "specularIntensity": 1.06,
                 "type": "PointLight"
+            },
+            "transform": {
+                "rotation": [
+                    5.658886859436435,
+                    27.067629869410332,
+                    8.793763542232927
+                ],
+                "scale": [
+                    1.4573169946670532,
+                    2.3663008213043213,
+                    2.8682761192321777
+                ],
+                "translation": [
+                    -28.24725914001465,
+                    66.93653869628906,
+                    14.992210388183594
+                ]
+            }
+        },
+        "hidden": false,
+        "name": "PointLight",
+        "ref": "entities/PointLight.entity"
+    },
+    "entities/Quad.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Quad"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "materials/checker.material"
+                ],
+                "receiveShadows": true
+            },
+            "transform": {
+                "rotation": [
+                    30.404494882757966,
+                    17.29632026165507,
+                    0.40339089233967373
+                ],
+                "scale": [
+                    145.1211700439453,
+                    145.1211700439453,
+                    145
+                ],
+                "translation": [
+                    -32.01801681518555,
+                    0,
+                    0.8393020629882812
+                ]
+            }
+        },
+        "hidden": false,
+        "name": "floor",
+        "ref": "entities/Quad.entity"
+    },
+    "entities/Sphere.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -32.73432922363281,
+                    0,
+                    -24.174087524414062
+                ]
+            }
+        },
+        "name": "power5",
+        "ref": "entities/Sphere.entity"
+    },
+    "entities/Sphere_0.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -25.805206298828125,
+                    0,
+                    -23.668975830078125
+                ]
+            }
+        },
+        "name": "power6",
+        "ref": "entities/Sphere_0.entity"
+    },
+    "entities/Sphere_1.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
             },
             "transform": {
                 "rotation": [
@@ -709,19 +1920,253 @@
                     0
                 ],
                 "scale": [
-                    1.1639376878738403,
-                    2.1837399005889893,
-                    2.704106092453003
+                    2,
+                    2,
+                    2
                 ],
                 "translation": [
-                    -4.913684844970703,
-                    29.369598388671875,
-                    -9.258489608764648
+                    -33.89790344238281,
+                    0,
+                    50.08702087402344
                 ]
             }
         },
-        "name": "PointLight",
-        "ref": "entities/PointLight.entity"
+        "name": "power1",
+        "ref": "entities/Sphere_1.entity"
+    },
+    "entities/Sphere_2.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -25.615642547607422,
+                    0,
+                    51.74540328979492
+                ]
+            }
+        },
+        "name": "power2",
+        "ref": "entities/Sphere_2.entity"
+    },
+    "entities/Sphere_3.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    11.205602645874023,
+                    0,
+                    9.564231872558594
+                ]
+            }
+        },
+        "name": "power7",
+        "ref": "entities/Sphere_3.entity"
+    },
+    "entities/Sphere_4.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    10.535257339477539,
+                    0,
+                    19.402244567871094
+                ]
+            }
+        },
+        "name": "power8",
+        "ref": "entities/Sphere_4.entity"
+    },
+    "entities/Sphere_5.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -71.56631469726562,
+                    0,
+                    7.65008544921875
+                ]
+            }
+        },
+        "name": "power4",
+        "ref": "entities/Sphere_5.entity"
+    },
+    "entities/Sphere_6.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -71.16810607910156,
+                    0,
+                    19.972251892089844
+                ]
+            }
+        },
+        "name": "power3",
+        "ref": "entities/Sphere_6.entity"
+    },
+    "entities/Sphere_7.entity": {
+        "components": {
+            "meshData": {
+                "shape": "Sphere",
+                "shapeOptions": {
+                    "radialSamples": 16,
+                    "textureMode": "Projected",
+                    "zSamples": 16
+                }
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [],
+                "receiveShadows": true
+            },
+            "transform": {
+                "parentRef": "entities/Group_7.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    2,
+                    2,
+                    2
+                ],
+                "translation": [
+                    -33.86320495605469,
+                    0,
+                    51.178245544433594
+                ]
+            }
+        },
+        "name": "power1",
+        "ref": "entities/Sphere_7.entity"
     },
     "entities/default_light.entity": {
         "components": {
@@ -3042,6 +4487,67 @@
         "name": "Goon_animation_walk",
         "ref": "goon_bind/animations/Goon_animation_walk.clip"
     },
+    "goon_bind/entities/DirectionalLight.entity": {
+        "components": {
+            "light": {
+                "attenuate": true,
+                "color": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "direction": [
+                    0,
+                    0,
+                    0
+                ],
+                "intensity": 1,
+                "lightCookie": null,
+                "shadowCaster": false,
+                "shadowSettings": {
+                    "darkness": 0,
+                    "far": 1000,
+                    "fov": 55,
+                    "near": 1,
+                    "projection": "Parallel",
+                    "resolution": [
+                        256,
+                        256
+                    ],
+                    "shadowType": "VSM",
+                    "size": 400,
+                    "type": "Blur",
+                    "upVector": [
+                        0,
+                        1,
+                        0
+                    ]
+                },
+                "specularIntensity": 1,
+                "type": "DirectionalLight"
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "DirectionalLight",
+        "ref": "goon_bind/entities/DirectionalLight.entity"
+    },
     "goon_bind/entities/RootNode.entity": {
         "components": {
             "animation": {
@@ -3060,20 +4566,136 @@
                     0
                 ],
                 "scale": [
-                    1,
-                    1,
-                    1
+                    3.60949444770813,
+                    3.60949444770813,
+                    3.60949444770813
                 ],
                 "translation": [
-                    -18.08495330810547,
-                    0,
-                    21.36129379272461
+                    -83.22634887695312,
+                    -0.10550805926322937,
+                    73.81939697265625
                 ]
             }
         },
         "name": "goon_bind",
         "nodeType": "Null",
         "ref": "goon_bind/entities/RootNode.entity"
+    },
+    "goon_bind/entities/RootNode_0.entity": {
+        "components": {
+            "stateMachine": {
+                "machineRefs": [
+                    "goon_bind/states/Machine_0.machine"
+                ]
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    1,
+                    0
+                ],
+                "scale": [
+                    3.60949444770813,
+                    3.60949444770813,
+                    3.60949444770813
+                ],
+                "translation": [
+                    -83.46968841552734,
+                    -0.04241296648979187,
+                    -44.39771270751953
+                ]
+            }
+        },
+        "name": "goon_bind",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/RootNode_0.entity"
+    },
+    "goon_bind/entities/RootNode_1.entity": {
+        "components": {
+            "stateMachine": {
+                "machineRefs": [
+                    "goon_bind/states/Machine_1.machine"
+                ]
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    1,
+                    0
+                ],
+                "scale": [
+                    3.60949444770813,
+                    3.60949444770813,
+                    3.60949444770813
+                ],
+                "translation": [
+                    22.244556427001953,
+                    -0.04241296648979187,
+                    -41.538002014160156
+                ]
+            }
+        },
+        "name": "pj3",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/RootNode_1.entity"
+    },
+    "goon_bind/entities/RootNode_2.entity": {
+        "components": {
+            "stateMachine": {
+                "machineRefs": [
+                    "goon_bind/states/Machine_2.machine"
+                ]
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    180,
+                    0
+                ],
+                "scale": [
+                    3.60949444770813,
+                    3.60949444770813,
+                    3.60949444770813
+                ],
+                "translation": [
+                    23.095050811767578,
+                    -0.04241296648979187,
+                    74.32383728027344
+                ]
+            }
+        },
+        "name": "goon_bind",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/RootNode_2.entity"
+    },
+    "goon_bind/entities/RootNode_3.entity": {
+        "components": {
+            "stateMachine": {
+                "machineRefs": [
+                    "goon_bind/states/Machine_3.machine"
+                ]
+            },
+            "transform": {
+                "rotation": [
+                    0,
+                    180,
+                    0
+                ],
+                "scale": [
+                    3.60949444770813,
+                    3.60949444770813,
+                    3.60949444770813
+                ],
+                "translation": [
+                    -81.2406234741211,
+                    -0.04241296648979187,
+                    74.84504699707031
+                ]
+            }
+        },
+        "name": "pj1",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/RootNode_3.entity"
     },
     "goon_bind/entities/charNode01.entity": {
         "components": {
@@ -3100,6 +4722,106 @@
         "nodeType": "Null",
         "ref": "goon_bind/entities/charNode01.entity"
     },
+    "goon_bind/entities/charNode01_0.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "charNode01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/charNode01_0.entity"
+    },
+    "goon_bind/entities/charNode01_1.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "charNode01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/charNode01_1.entity"
+    },
+    "goon_bind/entities/charNode01_2.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "charNode01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/charNode01_2.entity"
+    },
+    "goon_bind/entities/charNode01_3.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "charNode01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/charNode01_3.entity"
+    },
     "goon_bind/entities/globalMove01.entity": {
         "components": {
             "transform": {
@@ -3125,6 +4847,106 @@
         "nodeType": "Null",
         "ref": "goon_bind/entities/globalMove01.entity"
     },
+    "goon_bind/entities/globalMove01_0.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/charNode01_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.014000000000000002,
+                    0.014000000000000002,
+                    0.014000000000000002
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "globalMove01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/globalMove01_0.entity"
+    },
+    "goon_bind/entities/globalMove01_1.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/charNode01_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.014000000000000002,
+                    0.014000000000000002,
+                    0.014000000000000002
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "globalMove01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/globalMove01_1.entity"
+    },
+    "goon_bind/entities/globalMove01_2.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/charNode01_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.014000000000000002,
+                    0.014000000000000002,
+                    0.014000000000000002
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "globalMove01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/globalMove01_2.entity"
+    },
+    "goon_bind/entities/globalMove01_3.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/charNode01_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.014000000000000002,
+                    0.014000000000000002,
+                    0.014000000000000002
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "globalMove01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/globalMove01_3.entity"
+    },
     "goon_bind/entities/goon_grp.entity": {
         "components": {
             "transform": {
@@ -3149,6 +4971,145 @@
         "name": "goon_grp",
         "nodeType": "Null",
         "ref": "goon_bind/entities/goon_grp.entity"
+    },
+    "goon_bind/entities/goon_grp_0.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/RootNode_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_grp",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/goon_grp_0.entity"
+    },
+    "goon_bind/entities/goon_grp_1.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/RootNode_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_grp",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/goon_grp_1.entity"
+    },
+    "goon_bind/entities/goon_grp_2.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/RootNode_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_grp",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/goon_grp_2.entity"
+    },
+    "goon_bind/entities/goon_grp_3.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/RootNode_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    0.01,
+                    0.01,
+                    0.01
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_grp",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/goon_grp_3.entity"
+    },
+    "goon_bind/entities/goon_mesh.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": "goon_bind/meshes/goon_mesh_0.mesh",
+                "poseRef": "goon_bind/skeletons/Skeleton.skeleton"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "goon_bind/materials/goon_material.material"
+                ],
+                "receiveShadows": true,
+                "reflectable": false
+            },
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_mesh",
+        "nodeType": "Mesh",
+        "ref": "goon_bind/entities/goon_mesh.entity"
     },
     "goon_bind/entities/goon_mesh_0.entity": {
         "components": {
@@ -3189,6 +5150,123 @@
         "nodeType": "Mesh",
         "ref": "goon_bind/entities/goon_mesh_0.entity"
     },
+    "goon_bind/entities/goon_mesh_1.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": "goon_bind/meshes/goon_mesh_0.mesh",
+                "poseRef": "goon_bind/skeletons/Skeleton.skeleton"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "goon_bind/materials/goon_material.material"
+                ],
+                "receiveShadows": true,
+                "reflectable": false
+            },
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_mesh",
+        "nodeType": "Mesh",
+        "ref": "goon_bind/entities/goon_mesh_1.entity"
+    },
+    "goon_bind/entities/goon_mesh_2.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": "goon_bind/meshes/goon_mesh_0.mesh",
+                "poseRef": "goon_bind/skeletons/Skeleton.skeleton"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "goon_bind/materials/goon_material.material"
+                ],
+                "receiveShadows": true,
+                "reflectable": false
+            },
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_mesh",
+        "nodeType": "Mesh",
+        "ref": "goon_bind/entities/goon_mesh_2.entity"
+    },
+    "goon_bind/entities/goon_mesh_3.entity": {
+        "components": {
+            "meshData": {
+                "meshRef": "goon_bind/meshes/goon_mesh_0.mesh",
+                "poseRef": "goon_bind/skeletons/Skeleton.skeleton"
+            },
+            "meshRenderer": {
+                "castShadows": true,
+                "cullMode": "Dynamic",
+                "hidden": false,
+                "materialRefs": [
+                    "goon_bind/materials/goon_material.material"
+                ],
+                "receiveShadows": true,
+                "reflectable": false
+            },
+            "transform": {
+                "parentRef": "goon_bind/entities/goon_grp_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "goon_mesh",
+        "nodeType": "Mesh",
+        "ref": "goon_bind/entities/goon_mesh_3.entity"
+    },
     "goon_bind/entities/joints01.entity": {
         "components": {
             "transform": {
@@ -3213,6 +5291,106 @@
         "name": "joints01",
         "nodeType": "Null",
         "ref": "goon_bind/entities/joints01.entity"
+    },
+    "goon_bind/entities/joints01_0.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/globalMove01_0.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "joints01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/joints01_0.entity"
+    },
+    "goon_bind/entities/joints01_1.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/globalMove01_1.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "joints01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/joints01_1.entity"
+    },
+    "goon_bind/entities/joints01_2.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/globalMove01_2.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "joints01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/joints01_2.entity"
+    },
+    "goon_bind/entities/joints01_3.entity": {
+        "components": {
+            "transform": {
+                "parentRef": "goon_bind/entities/globalMove01_3.entity",
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "scale": [
+                    1,
+                    1,
+                    1
+                ],
+                "translation": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        "name": "joints01",
+        "nodeType": "Null",
+        "ref": "goon_bind/entities/joints01_3.entity"
     },
     "goon_bind/goon_bind.group": {
         "libraryRefs": [
@@ -3246,7 +5424,33 @@
             "GOO_ASSET_LIBRARY/goon_bind/binaries/1383303928_goon_animation_idle_Goon_animation_idle.bin",
             "goon_bind/animations/Goon_animation_walk.clip",
             "GOO_ASSET_LIBRARY/goon_bind/binaries/1383303764_goon_animation_walk_Goon_animation_walk.bin",
-            "goon_bind/states/Machine.machine"
+            "goon_bind/states/Machine.machine",
+            "goon_bind/entities/goon_mesh.entity",
+            "goon_bind/entities/joints01_0.entity",
+            "goon_bind/entities/globalMove01_0.entity",
+            "goon_bind/entities/charNode01_0.entity",
+            "goon_bind/entities/goon_grp_0.entity",
+            "goon_bind/entities/RootNode_0.entity",
+            "goon_bind/entities/joints01_1.entity",
+            "goon_bind/entities/globalMove01_1.entity",
+            "goon_bind/entities/charNode01_1.entity",
+            "goon_bind/entities/goon_mesh_1.entity",
+            "goon_bind/entities/goon_grp_1.entity",
+            "goon_bind/entities/goon_mesh_2.entity",
+            "goon_bind/entities/joints01_2.entity",
+            "goon_bind/entities/globalMove01_2.entity",
+            "goon_bind/entities/charNode01_2.entity",
+            "goon_bind/entities/goon_grp_2.entity",
+            "goon_bind/entities/RootNode_2.entity",
+            "goon_bind/entities/joints01_3.entity",
+            "goon_bind/entities/globalMove01_3.entity",
+            "goon_bind/entities/charNode01_3.entity",
+            "goon_bind/entities/goon_mesh_3.entity",
+            "goon_bind/entities/goon_grp_3.entity",
+            "goon_bind/entities/RootNode_3.entity",
+            "goon_bind/entities/RootNode_1.entity",
+            "goon_bind/materials/goon_material_0.material",
+            "goon_bind/entities/DirectionalLight.entity"
         ],
         "name": "The Goon",
         "ref": "goon_bind/goon_bind.group",
@@ -3257,7 +5461,7 @@
             "blendDst": "OneMinusSrcAlphaFactor",
             "blendEquation": "AddEquation",
             "blendSrc": "SrcAlphaFactor",
-            "blending": "NoBlending"
+            "blending": "CustomBlending"
         },
         "cullState": {
             "cullFace": "Back",
@@ -3268,9 +5472,9 @@
             "enabled": true,
             "write": true
         },
-        "name": "goon_material",
+        "name": "goon_material2",
         "ref": "goon_bind/materials/goon_material.material",
-        "renderQueue": 1000,
+        "renderQueue": 2000,
         "shaderRef": "GOO_ENGINE_SHADERS/uber",
         "texturesMapping": {
             "DIFFUSE_MAP": {
@@ -3290,7 +5494,7 @@
                 "textureRef": "goon_bind/textures/goon_reflection.texture"
             },
             "SPECULAR_MAP": {
-                "enabled": true,
+                "enabled": false,
                 "textureRef": "goon_bind/textures/goon_specular.texture"
             }
         },
@@ -3302,7 +5506,7 @@
             },
             "fresnel": {
                 "enabled": true,
-                "value": 0.21
+                "value": 0.44
             },
             "materialAmbient": {
                 "enabled": true,
@@ -3316,9 +5520,9 @@
             "materialDiffuse": {
                 "enabled": true,
                 "value": [
-                    1,
-                    1,
-                    1,
+                    0.9545454545454546,
+                    0.561840721262209,
+                    0.13016528925619833,
                     1
                 ]
             },
@@ -3342,7 +5546,7 @@
             },
             "materialSpecularPower": {
                 "enabled": true,
-                "value": 69
+                "value": 16
             },
             "normalMultiplier": {
                 "enabled": true,
@@ -3350,11 +5554,117 @@
             },
             "opacity": {
                 "enabled": true,
-                "value": 1
+                "value": 0.87
             },
             "reflectivity": {
                 "enabled": true,
-                "value": 0.42
+                "value": 0.61
+            }
+        }
+    },
+    "goon_bind/materials/goon_material_0.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "CustomBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": true
+        },
+        "name": "goon_material1",
+        "ref": "goon_bind/materials/goon_material_0.material",
+        "renderQueue": 2000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {
+            "DIFFUSE_MAP": {
+                "enabled": true,
+                "textureRef": "goon_bind/textures/goon_texture.texture"
+            },
+            "EMISSIVE_MAP": {
+                "enabled": true,
+                "textureRef": "goon_bind/textures/goon_glow.texture"
+            },
+            "NORMAL_MAP": {
+                "enabled": true,
+                "textureRef": "goon_bind/textures/goon_normal.texture"
+            },
+            "REFLECTION_MAP": {
+                "enabled": true,
+                "textureRef": "goon_bind/textures/goon_reflection.texture"
+            },
+            "SPECULAR_MAP": {
+                "enabled": false,
+                "textureRef": "goon_bind/textures/goon_specular.texture"
+            }
+        },
+        "type": "Phong",
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0.44
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0.31818181818181823,
+                    0.31818181818181823,
+                    0.31818181818181823,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.9545454545454546,
+                    0.561840721262209,
+                    0.13016528925619833,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0.990909090909091,
+                    1,
+                    0.9923636363636363,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 15
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1.01
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 0.87
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 0.61
             }
         }
     },
@@ -4293,6 +6603,486 @@
             }
         ]
     },
+    "goon_bind/states/Machine_0.machine": {
+        "id": "MTgyMDU4OTM3Ng==",
+        "initialState": "MTgyMDU4OTM3Nw==",
+        "name": "MOVE",
+        "ref": "goon_bind/states/Machine_0.machine",
+        "states": [
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU4OTM3OA==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_idle",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU4OTM3OQ==",
+                        "name": "Mouse Down",
+                        "options": {
+                            "transitions": {
+                                "middleMouseDown": "MTgyMDU4OTM4MA==",
+                                "mouseLeftDown": "MTgyMDU4OTM4MQ==",
+                                "rightMouseDown": "MTgyMDU4OTM4Mg=="
+                            }
+                        },
+                        "type": "Mouse Down"
+                    }
+                ],
+                "id": "MTgyMDU4OTM3Nw==",
+                "machineRefs": [],
+                "name": "IDLE",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU4OTM4MQ==",
+                        "key": "Left mouse down",
+                        "name": "Left mouse down",
+                        "targetState": "MTgyMDU4OTQwNA=="
+                    },
+                    {
+                        "id": "MTgyMDU4OTM4MA==",
+                        "key": "Middle mouse down",
+                        "name": "Middle mouse down",
+                        "targetState": "MTgyMDU4OTQwNA=="
+                    },
+                    {
+                        "id": "MTgyMDU4OTM4Mg==",
+                        "key": "Right mouse down",
+                        "name": "Right mouse down",
+                        "targetState": "MTgyMDU4OTQwNA=="
+                    }
+                ]
+            },
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU4OTQwNg==",
+                        "name": "Mouse Up",
+                        "options": {
+                            "transitions": {
+                                "middleMouseUp": "MTgyMDU4OTQwNw==",
+                                "mouseLeftUp": "MTgyMDU4OTQwOA==",
+                                "rightMouseUp": "MTgyMDU4OTQwOQ=="
+                            }
+                        },
+                        "type": "Mouse Up"
+                    },
+                    {
+                        "id": "MTgyMDU4OTQxMA==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_run",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU4OTQxMQ==",
+                        "name": "Move",
+                        "options": {
+                            "everyFrame": true,
+                            "oriented": true,
+                            "relative": true,
+                            "transitions": {},
+                            "translation": [
+                                0,
+                                0,
+                                0.2
+                            ]
+                        },
+                        "type": "Move"
+                    }
+                ],
+                "id": "MTgyMDU4OTQwNQ==",
+                "machineRefs": [],
+                "name": "RUN",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU4OTQwOA==",
+                        "key": "Left mouse up",
+                        "name": "Left mouse up",
+                        "targetState": "MTgyMDU4OTM3Nw=="
+                    },
+                    {
+                        "id": "MTgyMDU4OTQwNw==",
+                        "key": "Middle mouse up",
+                        "name": "Middle mouse up",
+                        "targetState": "MTgyMDU4OTQwNA=="
+                    },
+                    {
+                        "id": "MTgyMDU4OTQwOQ==",
+                        "key": "Right mouse up",
+                        "name": "Right mouse up",
+                        "targetState": "MTgyMDU4OTQwNA=="
+                    }
+                ]
+            }
+        ]
+    },
+    "goon_bind/states/Machine_1.machine": {
+        "id": "MTgyMDU4OTQxMg==",
+        "initialState": "MTgyMDU4OTQxMw==",
+        "name": "MOVE",
+        "ref": "goon_bind/states/Machine_1.machine",
+        "states": [
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDA4Ng==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_idle",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDA4Nw==",
+                        "name": "Mouse Down",
+                        "options": {
+                            "transitions": {
+                                "middleMouseDown": "MTgyMDU5MDA4OA==",
+                                "mouseLeftDown": "MTgyMDU5MDA4OQ==",
+                                "rightMouseDown": "MTgyMDU5MDA5MA=="
+                            }
+                        },
+                        "type": "Mouse Down"
+                    }
+                ],
+                "id": "MTgyMDU4OTQxMw==",
+                "machineRefs": [],
+                "name": "IDLE",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDA4OQ==",
+                        "key": "Left mouse down",
+                        "name": "Left mouse down",
+                        "targetState": "MTgyMDU5MDA5MQ=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDA4OA==",
+                        "key": "Middle mouse down",
+                        "name": "Middle mouse down",
+                        "targetState": "MTgyMDU5MDA5MQ=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDA5MA==",
+                        "key": "Right mouse down",
+                        "name": "Right mouse down",
+                        "targetState": "MTgyMDU5MDA5MQ=="
+                    }
+                ]
+            },
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDA5Mw==",
+                        "name": "Mouse Up",
+                        "options": {
+                            "transitions": {
+                                "middleMouseUp": "MTgyMDU5MDA5NA==",
+                                "mouseLeftUp": "MTgyMDU5MDA5NQ==",
+                                "rightMouseUp": "MTgyMDU5MDExNw=="
+                            }
+                        },
+                        "type": "Mouse Up"
+                    },
+                    {
+                        "id": "MTgyMDU5MDExOA==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_run",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDExOQ==",
+                        "name": "Move",
+                        "options": {
+                            "everyFrame": true,
+                            "oriented": true,
+                            "relative": true,
+                            "transitions": {},
+                            "translation": [
+                                0,
+                                0,
+                                0.2
+                            ]
+                        },
+                        "type": "Move"
+                    }
+                ],
+                "id": "MTgyMDU5MDA5Mg==",
+                "machineRefs": [],
+                "name": "RUN",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDA5NQ==",
+                        "key": "Left mouse up",
+                        "name": "Left mouse up",
+                        "targetState": "MTgyMDU4OTQxMw=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDA5NA==",
+                        "key": "Middle mouse up",
+                        "name": "Middle mouse up",
+                        "targetState": "MTgyMDU5MDA5MQ=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDExNw==",
+                        "key": "Right mouse up",
+                        "name": "Right mouse up",
+                        "targetState": "MTgyMDU5MDA5MQ=="
+                    }
+                ]
+            }
+        ]
+    },
+    "goon_bind/states/Machine_2.machine": {
+        "id": "MTgyMDU5MDEyMA==",
+        "initialState": "MTgyMDU5MDEyMQ==",
+        "name": "MOVE",
+        "ref": "goon_bind/states/Machine_2.machine",
+        "states": [
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDEyMg==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_idle",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDEyMw==",
+                        "name": "Mouse Down",
+                        "options": {
+                            "transitions": {
+                                "middleMouseDown": "MTgyMDU5MDEyNA==",
+                                "mouseLeftDown": "MTgyMDU5MDEyNQ==",
+                                "rightMouseDown": "MTgyMDU5MDEyNg=="
+                            }
+                        },
+                        "type": "Mouse Down"
+                    }
+                ],
+                "id": "MTgyMDU5MDEyMQ==",
+                "machineRefs": [],
+                "name": "IDLE",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDEyNQ==",
+                        "key": "Left mouse down",
+                        "name": "Left mouse down",
+                        "targetState": "MTgyMDU5MDE0OA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDEyNA==",
+                        "key": "Middle mouse down",
+                        "name": "Middle mouse down",
+                        "targetState": "MTgyMDU5MDE0OA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDEyNg==",
+                        "key": "Right mouse down",
+                        "name": "Right mouse down",
+                        "targetState": "MTgyMDU5MDE0OA=="
+                    }
+                ]
+            },
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDE1MA==",
+                        "name": "Mouse Up",
+                        "options": {
+                            "transitions": {
+                                "middleMouseUp": "MTgyMDU5MDE1MQ==",
+                                "mouseLeftUp": "MTgyMDU5MDE1Mg==",
+                                "rightMouseUp": "MTgyMDU5MDE1Mw=="
+                            }
+                        },
+                        "type": "Mouse Up"
+                    },
+                    {
+                        "id": "MTgyMDU5MDE1NA==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_run",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDE1NQ==",
+                        "name": "Move",
+                        "options": {
+                            "everyFrame": true,
+                            "oriented": true,
+                            "relative": true,
+                            "transitions": {},
+                            "translation": [
+                                0,
+                                0,
+                                0.2
+                            ]
+                        },
+                        "type": "Move"
+                    }
+                ],
+                "id": "MTgyMDU5MDE0OQ==",
+                "machineRefs": [],
+                "name": "RUN",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDE1Mg==",
+                        "key": "Left mouse up",
+                        "name": "Left mouse up",
+                        "targetState": "MTgyMDU5MDEyMQ=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDE1MQ==",
+                        "key": "Middle mouse up",
+                        "name": "Middle mouse up",
+                        "targetState": "MTgyMDU5MDE0OA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDE1Mw==",
+                        "key": "Right mouse up",
+                        "name": "Right mouse up",
+                        "targetState": "MTgyMDU5MDE0OA=="
+                    }
+                ]
+            }
+        ]
+    },
+    "goon_bind/states/Machine_3.machine": {
+        "id": "MTgyMDU5MDE1Ng==",
+        "initialState": "MTgyMDU5MDE1Nw==",
+        "name": "MOVE",
+        "ref": "goon_bind/states/Machine_3.machine",
+        "states": [
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDE3OQ==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_idle",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDE4MA==",
+                        "name": "Mouse Down",
+                        "options": {
+                            "transitions": {
+                                "middleMouseDown": "MTgyMDU5MDE4MQ==",
+                                "mouseLeftDown": "MTgyMDU5MDE4Mg==",
+                                "rightMouseDown": "MTgyMDU5MDE4Mw=="
+                            }
+                        },
+                        "type": "Mouse Down"
+                    }
+                ],
+                "id": "MTgyMDU5MDE1Nw==",
+                "machineRefs": [],
+                "name": "IDLE",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDE4Mg==",
+                        "key": "Left mouse down",
+                        "name": "Left mouse down",
+                        "targetState": "MTgyMDU5MDE4NA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDE4MQ==",
+                        "key": "Middle mouse down",
+                        "name": "Middle mouse down",
+                        "targetState": "MTgyMDU5MDE4NA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDE4Mw==",
+                        "key": "Right mouse down",
+                        "name": "Right mouse down",
+                        "targetState": "MTgyMDU5MDE4NA=="
+                    }
+                ]
+            },
+            {
+                "actions": [
+                    {
+                        "id": "MTgyMDU5MDE4Ng==",
+                        "name": "Mouse Up",
+                        "options": {
+                            "transitions": {
+                                "middleMouseUp": "MTgyMDU5MDE4Nw==",
+                                "mouseLeftUp": "MTgyMDU5MDE4OA==",
+                                "rightMouseUp": "MTgyMDU5MDIxMA=="
+                            }
+                        },
+                        "type": "Mouse Up"
+                    },
+                    {
+                        "id": "MTgyMDU5MDIxMQ==",
+                        "name": "Set Animation",
+                        "options": {
+                            "animation": "Goon_animation_run",
+                            "transitions": {}
+                        },
+                        "type": "Set Animation"
+                    },
+                    {
+                        "id": "MTgyMDU5MDIxMg==",
+                        "name": "Move",
+                        "options": {
+                            "everyFrame": true,
+                            "oriented": true,
+                            "relative": true,
+                            "transitions": {},
+                            "translation": [
+                                0,
+                                0,
+                                0.2
+                            ]
+                        },
+                        "type": "Move"
+                    }
+                ],
+                "id": "MTgyMDU5MDE4NQ==",
+                "machineRefs": [],
+                "name": "RUN",
+                "transitions": [
+                    {
+                        "id": "MTgyMDU5MDE4OA==",
+                        "key": "Left mouse up",
+                        "name": "Left mouse up",
+                        "targetState": "MTgyMDU5MDE1Nw=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDE4Nw==",
+                        "key": "Middle mouse up",
+                        "name": "Middle mouse up",
+                        "targetState": "MTgyMDU5MDE4NA=="
+                    },
+                    {
+                        "id": "MTgyMDU5MDIxMA==",
+                        "key": "Right mouse up",
+                        "name": "Right mouse up",
+                        "targetState": "MTgyMDU5MDE4NA=="
+                    }
+                ]
+            }
+        ]
+    },
     "goon_bind/textures/goon_glow.texture": {
         "anisotropy": 1,
         "fileName": "GOO_ASSET_LIBRARY/goon_bind/images/goon_glow.jpg",
@@ -4380,7 +7170,7 @@
         "fileName": "goon_texture.jpg",
         "flipY": true,
         "magFilter": "Bilinear",
-        "minFilter": "Trilinear",
+        "minFilter": "BilinearNearestMipMap",
         "name": "goon_texture",
         "offset": [
             0,
@@ -4396,30 +7186,21 @@
         "wrapU": "Repeat",
         "wrapV": "Repeat"
     },
-    "materials/floor.material": {
+    "materials/Wood.material": {
         "blendState": {
             "blendDst": "OneMinusSrcAlphaFactor",
             "blendEquation": "AddEquation",
             "blendSrc": "SrcAlphaFactor",
             "blending": "NoBlending"
         },
-        "cullState": {
-            "cullFace": "Back",
-            "enabled": true,
-            "frontFace": "CCW"
-        },
-        "depthState": {
-            "enabled": true,
-            "write": true
-        },
-        "name": "floor",
-        "ref": "materials/floor.material",
+        "name": "Wood",
+        "ref": "materials/Wood.material",
         "renderQueue": 1000,
         "shaderRef": "GOO_ENGINE_SHADERS/uber",
         "texturesMapping": {
             "DIFFUSE_MAP": {
                 "enabled": true,
-                "textureRef": "textures/floor.texture"
+                "textureRef": "textures/wood.texture"
             }
         },
         "uniforms": {
@@ -4482,6 +7263,359 @@
             "reflectivity": {
                 "enabled": true,
                 "value": 0
+            }
+        }
+    },
+    "materials/checker.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "NoBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": true
+        },
+        "name": "checker",
+        "ref": "materials/checker.material",
+        "renderQueue": 1000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {
+            "DIFFUSE_MAP": {
+                "enabled": true,
+                "textureRef": "textures/checker.texture"
+            }
+        },
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0.1,
+                    0.1,
+                    0.1,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.8,
+                    0.8,
+                    0.8,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    0.6,
+                    0.6,
+                    0.6,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 64
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 1
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 0
+            }
+        }
+    },
+    "materials/checker_0.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "NoBlending"
+        },
+        "name": "checker",
+        "ref": "materials/checker_0.material",
+        "renderQueue": 1000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {
+            "DIFFUSE_MAP": {
+                "enabled": true,
+                "textureRef": "textures/checker.texture"
+            }
+        },
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0.1,
+                    0.1,
+                    0.1,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.8,
+                    0.8,
+                    0.8,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    0.6,
+                    0.6,
+                    0.6,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 64
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 1
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 0
+            }
+        }
+    },
+    "materials/wood.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "CustomBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": true
+        },
+        "dualTransparency": true,
+        "name": "Polished Wood",
+        "ref": "materials/wood.material",
+        "renderQueue": 2000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {
+            "DIFFUSE_MAP": {
+                "enabled": true,
+                "textureRef": "textures/wood.texture"
+            },
+            "NORMAL_MAP": null
+        },
+        "thumbnail": "materials/images/wood_thumbnail.jpg",
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0.06
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.6181818181818182,
+                    0.33638421955403086,
+                    0.1236363636363636,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 73
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 1
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 0.1
+            }
+        }
+    },
+    "materials/wood_0.material": {
+        "blendState": {
+            "blendDst": "OneMinusSrcAlphaFactor",
+            "blendEquation": "AddEquation",
+            "blendSrc": "SrcAlphaFactor",
+            "blending": "CustomBlending"
+        },
+        "cullState": {
+            "cullFace": "Back",
+            "enabled": true,
+            "frontFace": "CCW"
+        },
+        "depthState": {
+            "enabled": true,
+            "write": true
+        },
+        "dualTransparency": true,
+        "name": "Polished Wood",
+        "ref": "materials/wood_0.material",
+        "renderQueue": 2000,
+        "shaderRef": "GOO_ENGINE_SHADERS/uber",
+        "texturesMapping": {
+            "DIFFUSE_MAP": {
+                "enabled": true,
+                "textureRef": "textures/wood_0.texture"
+            },
+            "NORMAL_MAP": null
+        },
+        "thumbnail": "materials/images/wood_thumbnail.jpg",
+        "uniforms": {
+            "discardThreshold": {
+                "enabled": false,
+                "value": 0
+            },
+            "fresnel": {
+                "enabled": true,
+                "value": 0.06
+            },
+            "materialAmbient": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialDiffuse": {
+                "enabled": true,
+                "value": [
+                    0.6181818181818182,
+                    0.33638421955403086,
+                    0.1236363636363636,
+                    1
+                ]
+            },
+            "materialEmissive": {
+                "enabled": true,
+                "value": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            },
+            "materialSpecular": {
+                "enabled": true,
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1
+                ]
+            },
+            "materialSpecularPower": {
+                "enabled": true,
+                "value": 73
+            },
+            "normalMultiplier": {
+                "enabled": true,
+                "value": 1
+            },
+            "opacity": {
+                "enabled": true,
+                "value": 1
+            },
+            "reflectivity": {
+                "enabled": true,
+                "value": 0.1
             }
         }
     },
@@ -4551,41 +7685,82 @@
     },
     "project.project": {
         "backgroundColor": [
-            0,
-            0,
-            0,
+            0.18247933884297524,
+            0.4585785123966942,
+            0.8727272727272728,
             1
         ],
         "created": "2013-12-23T16:17:40.584089",
         "deleted": false,
         "edit": [],
         "entityRefs": [
-            "entities/Box.entity",
+            "entities/DefaultToolCamera.entity",
             "entities/Box_0.entity",
-            "entities/Box_1.entity",
-            "entities/Box_2.entity",
             "entities/Box_3.entity",
-            "entities/Box_4.entity",
-            "entities/Box_5.entity",
-            "entities/Box_6.entity",
-            "entities/Box_7.entity",
-            "entities/Box_8.entity",
-            "entities/Box_9.entity",
-            "entities/Box_10.entity",
-            "entities/Box_11.entity",
-            "entities/Box_12.entity",
-            "entities/Box_13.entity",
-            "entities/Box_14.entity",
-            "entities/Box_15.entity",
-            "entities/Floor.entity",
-            "goon_bind/entities/joints01.entity",
-            "goon_bind/entities/globalMove01.entity",
-            "goon_bind/entities/goon_mesh_0.entity",
-            "goon_bind/entities/goon_grp.entity",
-            "goon_bind/entities/charNode01.entity",
-            "goon_bind/entities/RootNode.entity",
             "entities/PointLight.entity",
-            "entities/Camera.entity",
+            "entities/Box_16.entity",
+            "entities/Box_18.entity",
+            "entities/Box_19.entity",
+            "entities/Group.entity",
+            "entities/Box_20.entity",
+            "entities/Box_21.entity",
+            "entities/Box_22.entity",
+            "entities/Group_0.entity",
+            "entities/Box_23.entity",
+            "entities/Box_24.entity",
+            "entities/Box_26.entity",
+            "entities/Box_27.entity",
+            "entities/Box_28.entity",
+            "entities/Box_29.entity",
+            "entities/Box_30.entity",
+            "entities/Box_31.entity",
+            "entities/Group_1.entity",
+            "entities/Group_2.entity",
+            "entities/Group_3.entity",
+            "entities/Group_4.entity",
+            "entities/Group_5.entity",
+            "entities/Box_32.entity",
+            "entities/Box_33.entity",
+            "entities/Box_34.entity",
+            "entities/Box_35.entity",
+            "entities/Box_36.entity",
+            "entities/Box_37.entity",
+            "entities/Group_6.entity",
+            "goon_bind/entities/goon_mesh.entity",
+            "goon_bind/entities/joints01_0.entity",
+            "goon_bind/entities/globalMove01_0.entity",
+            "goon_bind/entities/charNode01_0.entity",
+            "goon_bind/entities/goon_grp_0.entity",
+            "goon_bind/entities/RootNode_0.entity",
+            "goon_bind/entities/joints01_1.entity",
+            "goon_bind/entities/globalMove01_1.entity",
+            "goon_bind/entities/charNode01_1.entity",
+            "goon_bind/entities/goon_mesh_1.entity",
+            "goon_bind/entities/goon_grp_1.entity",
+            "goon_bind/entities/RootNode_1.entity",
+            "goon_bind/entities/goon_mesh_2.entity",
+            "goon_bind/entities/joints01_2.entity",
+            "goon_bind/entities/globalMove01_2.entity",
+            "goon_bind/entities/charNode01_2.entity",
+            "goon_bind/entities/goon_grp_2.entity",
+            "goon_bind/entities/RootNode_2.entity",
+            "entities/Sphere.entity",
+            "entities/Sphere_0.entity",
+            "entities/Sphere_2.entity",
+            "entities/Sphere_3.entity",
+            "entities/Sphere_4.entity",
+            "entities/Sphere_5.entity",
+            "entities/Sphere_6.entity",
+            "goon_bind/entities/joints01_3.entity",
+            "goon_bind/entities/globalMove01_3.entity",
+            "goon_bind/entities/charNode01_3.entity",
+            "goon_bind/entities/goon_mesh_3.entity",
+            "goon_bind/entities/goon_grp_3.entity",
+            "goon_bind/entities/RootNode_3.entity",
+            "entities/Group_7.entity",
+            "entities/Sphere_7.entity",
+            "entities/Box_38.entity",
+            "entities/Camera_0.entity",
             "entities/default_light.entity",
             "entities/default_light_2.entity"
         ],
@@ -4607,7 +7782,7 @@
         ],
         "id": "aU0ewj0TRWu58GPpMFyQ_w",
         "licenseType": "CC0",
-        "modified": "2013-12-23T22:41:06.699215",
+        "modified": "2013-12-26T13:39:32.592726",
         "name": "Mapa",
         "originalLicenseType": null,
         "own": [
@@ -4632,12 +7807,12 @@
             },
             "environmentType": 1,
             "imageUrls": [
-                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/rightsh.jpg",
-                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/leftsh.jpg",
-                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/topsh.jpg",
-                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/botsh.jpg",
                 "GOO_ASSET_LIBRARY/images/elyvisions/sky30/frontsh.jpg",
-                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/backsh.jpg"
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/leftsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/rightsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/botsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/backsh.jpg",
+                "GOO_ASSET_LIBRARY/images/elyvisions/sky30/topsh.jpg"
             ],
             "ref": "environment/Hills.skybox",
             "rotation": 0,
@@ -4656,10 +7831,9 @@
     },
     "root.group": {
         "libraryRefs": [
+            "scripts/DefaultToolCameraScript.script",
+            "entities/DefaultToolCamera.entity",
             "entities/Box.entity",
-            "images/floor.jpg",
-            "textures/floor.texture",
-            "materials/floor.material",
             "entities/Box_0.entity",
             "entities/Box_1.entity",
             "entities/Box_2.entity",
@@ -4676,8 +7850,6 @@
             "entities/Box_13.entity",
             "entities/Box_14.entity",
             "entities/Box_15.entity",
-            "entities/Floor.entity",
-            "entities/PointLight.entity",
             "entities/Camera.entity",
             "posteffects/Sepia.posteffect",
             "posteffects/Bloom.posteffect",
@@ -4686,29 +7858,165 @@
             "posteffects/RgbShift.posteffect",
             "posteffects/Vignette.posteffect",
             "posteffects/Bleach.posteffect",
+            "entities/Box_16.entity",
+            "entities/Box_17.entity",
+            "entities/Box_18.entity",
+            "entities/Box_19.entity",
+            "entities/Group.entity",
+            "entities/Box_20.entity",
+            "entities/Box_21.entity",
+            "entities/Box_22.entity",
+            "entities/Group_0.entity",
+            "entities/Box_23.entity",
+            "entities/Box_24.entity",
+            "entities/Box_25.entity",
+            "entities/Box_26.entity",
+            "entities/Box_27.entity",
+            "entities/Box_28.entity",
+            "entities/Box_29.entity",
+            "entities/Box_30.entity",
+            "entities/Box_31.entity",
+            "entities/Group_1.entity",
+            "entities/Group_3.entity",
+            "entities/Group_4.entity",
+            "entities/Group_5.entity",
+            "entities/PointLight.entity",
+            "entities/Group_2.entity",
+            "entities/Box_32.entity",
+            "entities/Box_33.entity",
+            "entities/Box_34.entity",
+            "entities/Box_35.entity",
+            "entities/Box_37.entity",
+            "entities/Box_36.entity",
+            "entities/Group_6.entity",
+            "goon_bind/states/Machine_0.machine",
+            "goon_bind/states/Machine_1.machine",
+            "goon_bind/states/Machine_2.machine",
+            "entities/Cone.entity",
+            "entities/Sphere.entity",
+            "entities/Sphere_0.entity",
+            "entities/Sphere_1.entity",
+            "entities/Sphere_2.entity",
+            "entities/Sphere_3.entity",
+            "entities/Sphere_4.entity",
+            "entities/Sphere_5.entity",
+            "entities/Sphere_6.entity",
+            "goon_bind/states/Machine_3.machine",
+            "entities/Group_7.entity",
+            "entities/Sphere_7.entity",
+            "entities/Quad.entity",
+            "textures/checker.texture",
+            "GOO_ASSET_LIBRARY/images/checker.png",
+            "materials/checker.material",
+            "entities/Box_38.entity",
+            "materials/checker_0.material",
+            "materials/wood.material",
+            "textures/wood.texture",
+            "GOO_ASSET_LIBRARY/images/beech.jpg",
+            "materials/Wood.material",
+            "materials/wood_0.material",
+            "textures/wood_0.texture",
+            "entities/Camera_0.entity",
             "entities/default_light.entity",
             "entities/default_light_2.entity"
         ],
         "name": "root",
         "ref": "root.group"
     },
-    "textures/floor.texture": {
+    "scripts/DefaultToolCameraScript.script": {
+        "className": "OrbitNPanControlScript",
+        "name": "DefaultToolCameraScript.script",
+        "options": {
+            "clampAzimuth": false,
+            "detailZoom": 0.15,
+            "dragOnly": true,
+            "invertedWheel": true,
+            "invertedX": false,
+            "invertedY": false,
+            "lookAtPoint": [
+                -30.834701538085938,
+                2.649139165878296,
+                18.846220016479492
+            ],
+            "maxAscent": 1.5699236621688994,
+            "maxAzimuth": 4.71238898038469,
+            "maxZoomDistance": 6000,
+            "minAscent": -1.5699236621688994,
+            "minAzimuth": 1.5707963267948966,
+            "minZoomDistance": 0.1,
+            "spherical": [
+                3292.33837890625,
+                1.5707963705062866,
+                0.4000000059604645
+            ],
+            "turnSpeedHorizontal": 0.005,
+            "turnSpeedVertical": 0.005,
+            "worldUpVector": [
+                0,
+                1,
+                0
+            ],
+            "zoomSpeed": 0.3
+        },
+        "ref": "scripts/DefaultToolCameraScript.script"
+    },
+    "textures/checker.texture": {
         "anisotropy": 1,
-        "fileName": "floor.jpg",
+        "fileName": "checker.png",
         "flipY": true,
         "magFilter": "Bilinear",
         "minFilter": "Trilinear",
-        "name": "floor",
+        "name": "checker",
         "offset": [
             0,
             0
         ],
-        "ref": "textures/floor.texture",
+        "ref": "textures/checker.texture",
         "repeat": [
             1,
             1
         ],
-        "url": "images/floor.jpg",
+        "url": "GOO_ASSET_LIBRARY/images/checker.png",
+        "wrapU": "Repeat",
+        "wrapV": "Repeat"
+    },
+    "textures/wood.texture": {
+        "anisotropy": 1,
+        "fileName": "preview_wood-008_beech-hearted-1_r.jpg",
+        "flipY": true,
+        "magFilter": "Bilinear",
+        "minFilter": "Trilinear",
+        "name": "Wood",
+        "offset": [
+            0,
+            0
+        ],
+        "ref": "textures/wood.texture",
+        "repeat": [
+            1,
+            1
+        ],
+        "url": "GOO_ASSET_LIBRARY/images/beech.jpg",
+        "wrapU": "Repeat",
+        "wrapV": "Repeat"
+    },
+    "textures/wood_0.texture": {
+        "anisotropy": 1,
+        "fileName": "preview_wood-008_beech-hearted-1_r.jpg",
+        "flipY": true,
+        "magFilter": "Bilinear",
+        "minFilter": "Trilinear",
+        "name": "Wood",
+        "offset": [
+            0,
+            0
+        ],
+        "ref": "textures/wood_0.texture",
+        "repeat": [
+            1,
+            1
+        ],
+        "url": "GOO_ASSET_LIBRARY/images/beech.jpg",
         "wrapU": "Repeat",
         "wrapV": "Repeat"
     }
