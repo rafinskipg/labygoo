@@ -1176,12 +1176,12 @@
                 ],
                 "scale": [
                     150,
-                    0,
+                    0.5,
                     150
                 ],
                 "translation": [
                     -30.834705352783203,
-                    0,
+                    -0.6,
                     18.846221923828125
                 ]
             }
@@ -1490,23 +1490,6 @@
         "hidden": true,
         "name": "Cone",
         "ref": "entities/Cone.entity"
-    },
-    "entities/DefaultToolCamera.entity": {
-        "components": {
-            "camera": {
-                "aspect": 1.1587485515643106,
-                "far": 20000,
-                "fov": 45,
-                "near": 0.4
-            },
-            "script": {
-                "scriptRefs": [
-                    "scripts/DefaultToolCameraScript.script"
-                ]
-            }
-        },
-        "name": "DefaultToolCamera.entity",
-        "ref": "entities/DefaultToolCamera.entity"
     },
     "entities/Group.entity": {
         "components": {
@@ -7694,7 +7677,6 @@
         "deleted": false,
         "edit": [],
         "entityRefs": [
-            "entities/DefaultToolCamera.entity",
             "entities/Box_0.entity",
             "entities/Box_3.entity",
             "entities/PointLight.entity",
@@ -7831,8 +7813,6 @@
     },
     "root.group": {
         "libraryRefs": [
-            "scripts/DefaultToolCameraScript.script",
-            "entities/DefaultToolCamera.entity",
             "entities/Box.entity",
             "entities/Box_0.entity",
             "entities/Box_1.entity",
@@ -7922,43 +7902,6 @@
         ],
         "name": "root",
         "ref": "root.group"
-    },
-    "scripts/DefaultToolCameraScript.script": {
-        "className": "OrbitNPanControlScript",
-        "name": "DefaultToolCameraScript.script",
-        "options": {
-            "clampAzimuth": false,
-            "detailZoom": 0.15,
-            "dragOnly": true,
-            "invertedWheel": true,
-            "invertedX": false,
-            "invertedY": false,
-            "lookAtPoint": [
-                -30.834701538085938,
-                2.649139165878296,
-                18.846220016479492
-            ],
-            "maxAscent": 1.5699236621688994,
-            "maxAzimuth": 4.71238898038469,
-            "maxZoomDistance": 6000,
-            "minAscent": -1.5699236621688994,
-            "minAzimuth": 1.5707963267948966,
-            "minZoomDistance": 0.1,
-            "spherical": [
-                3292.33837890625,
-                1.5707963705062866,
-                0.4000000059604645
-            ],
-            "turnSpeedHorizontal": 0.005,
-            "turnSpeedVertical": 0.005,
-            "worldUpVector": [
-                0,
-                1,
-                0
-            ],
-            "zoomSpeed": 0.3
-        },
-        "ref": "scripts/DefaultToolCameraScript.script"
     },
     "textures/checker.texture": {
         "anisotropy": 1,

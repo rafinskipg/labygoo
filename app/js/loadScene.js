@@ -148,7 +148,7 @@ require([
 				goo.renderer.domElement.id = 'goo';
 				document.body.appendChild(goo.renderer.domElement);
 
-				//JAVI -> Application code goes here! En el configs viene todo lo cargado del fichero root.bundle
+				//Application code goes here! En el configs viene todo lo cargado del fichero root.bundle
                 console.log(configs)
                 
                 //Funcion para crear entidades lo usaremos para crear diamantes o bonuses que se puedan pickear
@@ -179,10 +179,10 @@ require([
                 
    
                 //Obtenemos la entidad del muñeco, del fichero root.bundle
-                var goonEntity = loader.getCachedObjectForRef('goon_bind/entities/RootNode.entity');
+                var goonEntity = loader.getCachedObjectForRef('goon_bind/entities/RootNode_0.entity');
                 console.log(goonEntity);
                 //Decimos que viewCam es la entidad camera entity del root bundle ( definida en goo create)
-                goo.viewCam = loader.getCachedObjectForRef('entities/Camera.entity');
+                goo.viewCam = loader.getCachedObjectForRef('entities/Camera_0.entity');
                 
                 //Decimos que cada vez que se haga el loop se ejecute lo de dentro de aqui
                 goo.callbacks.push(function() {
@@ -192,7 +192,18 @@ require([
                         
                         //Usamos lerp para mover, en vez de sumar directamente los valores
                         //Porque se supone que lo hace mejor http://www.gootechnologies.com/learn/engine/examples/lerping/
-                        goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
+                        //goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
+                        var trans = goonEntity.transformComponent.transform.translation;
+                        if(trans.x < intersectionWithFloor.x){
+                            trans.x +=  goo.world.tpf * 15;
+                        }else{
+                            trans.x -=  goo.world.tpf * 15;
+                        }
+                        if(trans.z < intersectionWithFloor.z){
+                            trans.z += goo.world.tpf * 15;
+                        }else{
+                            trans.z -=  goo.world.tpf * 15;
+                        }
                         // update the new transforms
                         goonEntity.transformComponent.setUpdated();
                         
@@ -248,3 +259,7 @@ require([
                             goo.renderer.viewportWidth,
                             goo.renderer.viewportHeight
                         ); */
+                        
+/*
+var cam = loader.getCachedObjectForRef('entities/DefaultToolCamera.entity');
+                cam.scriptComponent.scripts = [];*/
