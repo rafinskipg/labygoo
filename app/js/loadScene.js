@@ -206,8 +206,8 @@ require([
                         }else if(trans.z > intersectionWithFloor.z){
                             trans.z -=  goo.world.tpf * 15;
                         } 
-                        debugger;
-                        console.log(goonEntity.intersects);
+                        
+                        
                         goonEntity.animationComponent.transitionTo(goonEntity.animationComponent.getStates()[1]);
                         goonEntity.transformComponent.lookAt(intersectionWithFloor,new Vector3(0,1,0));
                       //goonEntity.transformComponent.setRotation(0,goonEntity.transformComponent.transform.rotation.y+180,0);
