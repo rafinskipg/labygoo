@@ -179,7 +179,9 @@ require([
                 
    
                 //Obtenemos la entidad del muñeco, del fichero root.bundle
-                var goonEntity = loader.getCachedObjectForRef('goon_bind/entities/RootNode_0.entity');
+                var goonEntity = loader.getCachedObjectForRef('goon_bind_1/entities/RootNode.entity');
+                
+                
                 console.log(goonEntity);
                 //Decimos que viewCam es la entidad camera entity del root bundle ( definida en goo create)
                 goo.viewCam = loader.getCachedObjectForRef('entities/Camera_0.entity');
@@ -193,21 +195,33 @@ require([
                         //Usamos lerp para mover, en vez de sumar directamente los valores
                         //Porque se supone que lo hace mejor http://www.gootechnologies.com/learn/engine/examples/lerping/
                         //goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
-                        var trans = goonEntity.transformComponent.transform.translation;
+                         var trans = goonEntity.transformComponent.transform.translation;
                         if(trans.x < intersectionWithFloor.x){
                             trans.x +=  goo.world.tpf * 15;
-                        }else{
+                        }else if(trans.x > intersectionWithFloor.x){
                             trans.x -=  goo.world.tpf * 15;
                         }
                         if(trans.z < intersectionWithFloor.z){
                             trans.z += goo.world.tpf * 15;
-                        }else{
+                        }else if(trans.z > intersectionWithFloor.z){
                             trans.z -=  goo.world.tpf * 15;
-                        }
+                        } 
+                        debugger;
+                        console.log(goonEntity.intersects);
+                        goonEntity.animationComponent.transitionTo(goonEntity.animationComponent.getStates()[1]);
+                        goonEntity.transformComponent.lookAt(intersectionWithFloor,new Vector3(0,1,0));
+                      //goonEntity.transformComponent.setRotation(0,goonEntity.transformComponent.transform.rotation.y+180,0);
+                       // console.log(goonEntity.transformComponent.transform.rotation.y)
+                        //goonEntity.transformComponent.setRotation(0,-goonEntity.transformComponent.transform.rotation.y,0);
+                        
                         // update the new transforms
                         goonEntity.transformComponent.setUpdated();
                         
+                    }else if(!isClicking){
+                        goonEntity.animationComponent.transitionTo(goonEntity.animationComponent.getStates()[0]);
+                    
                     }
+                    
                 });
 
                 //Javi -> Usamos hammer.js para detectar los eventos touch / Aqui tenemos que poner lo de que cambie la posicion
@@ -263,3 +277,4 @@ require([
 /*
 var cam = loader.getCachedObjectForRef('entities/DefaultToolCamera.entity');
                 cam.scriptComponent.scripts = [];*/
+       /*goonEntity.transformComponent.setScale(1.1,1.1,1.1) */
