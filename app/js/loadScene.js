@@ -122,9 +122,7 @@ require([
             Input.mousePosition = new Vector2();
             var isClicking = false;
             goo.ray = new Ray();      
-            //JAVI -> Funcion castRay, es la que dispara el rayo desde la camara y se lo pone al sistema de "picking" que intersecciona con los objetos 
-            //El pavo de github usa la funcion https://github.com/Goobuzz/Bubble-Pop/blob/gh-pages/js/Game.js 
-            // onPick modificada, devolviendole los objetos exactos o algo asi. De momento nos da igual , podemos hacerlo mejor
+            //Cast a ray that intersects, using the picking system
             goo.castRay = function(ray, mask, all){
                 picking.pickRay = ray;
                 picking.mask = mask;
@@ -132,10 +130,10 @@ require([
                 picking._process();
                 //return picking.hit;
             };
-            //Esto es de js previene que puedas añadir mas propiedades al objeto. Asi será mas optimo
+            //Prevent modifying the ray object
             Object.freeze(goo.castRay);
             
-            
+            goo.world.process();
 			// The loader takes care of loading the data
 			var loader = new DynamicLoader({
 				world: goo.world,
@@ -180,22 +178,11 @@ require([
    
                 //Obtenemos la entidad del muñeco, del fichero root.bundle
                 var goonEntity = loader.getCachedObjectForRef('goon_bind_1/entities/RootNode.entity');
-                
-                
-                console.log(goonEntity);
-                //Decimos que viewCam es la entidad camera entity del root bundle ( definida en goo create)
-                goo.viewCam = loader.getCachedObjectForRef('entities/Camera_0.entity');
-                
-                //Decimos que cada vez que se haga el loop se ejecute lo de dentro de aqui
-                goo.callbacks.push(function() {
-                    if(isClicking && intersectionWithFloor){
-                        //JAVI -> En goonEntity.transformComponent.transform.translation estan las coordenadas x,y,z del muñeco
-                        //Todas las entidades tienen transformComponent.transform.translation o rotation
+                var scripts = new ScriptComponent();
+                scripts.scripts.push({run:function(entity, tpf){
+                   if(isClicking && intersectionWithFloor){
                         
-                        //Usamos lerp para mover, en vez de sumar directamente los valores
-                        //Porque se supone que lo hace mejor http://www.gootechnologies.com/learn/engine/examples/lerping/
-                        //goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
-                         var trans = goonEntity.transformComponent.transform.translation;
+                        var trans = entity.transformComponent.transform.translation;
                         if(trans.x < intersectionWithFloor.x){
                             trans.x +=  goo.world.tpf * 15;
                         }else if(trans.x > intersectionWithFloor.x){
@@ -206,32 +193,38 @@ require([
                         }else if(trans.z > intersectionWithFloor.z){
                             trans.z -=  goo.world.tpf * 15;
                         } 
+                        console.log(entity);
                         
-                        
-                        goonEntity.animationComponent.transitionTo(goonEntity.animationComponent.getStates()[1]);
-                        goonEntity.transformComponent.lookAt(intersectionWithFloor,new Vector3(0,1,0));
-                      //goonEntity.transformComponent.setRotation(0,goonEntity.transformComponent.transform.rotation.y+180,0);
-                       // console.log(goonEntity.transformComponent.transform.rotation.y)
-                        //goonEntity.transformComponent.setRotation(0,-goonEntity.transformComponent.transform.rotation.y,0);
-                        
+                        entity.animationComponent.transitionTo(entity.animationComponent.getStates()[1]);
+                        entity.transformComponent.lookAt(intersectionWithFloor,new Vector3(0,1,0));
+                       //console.log(entity.meshRendererComponent.worldBound.intersects);
+                        //goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
                         // update the new transforms
-                        goonEntity.transformComponent.setUpdated();
+                        entity.transformComponent.setUpdated();
                         
                     }else if(!isClicking){
-                        goonEntity.animationComponent.transitionTo(goonEntity.animationComponent.getStates()[0]);
+                        entity.animationComponent.transitionTo(entity.animationComponent.getStates()[0]);
                     
                     }
+                }});
+                goonEntity.setComponent(scripts);
+                
+
+                //Decimos que viewCam es la entidad camera entity del root bundle ( definida en goo create)
+                goo.viewCam = loader.getCachedObjectForRef('entities/Camera_0.entity');
+      
+                //Decimos que cada vez que se haga el loop se ejecute lo de dentro de aqui
+                goo.callbacks.push(function() {
+                    
                     
                 });
 
-                //Javi -> Usamos hammer.js para detectar los eventos touch / Aqui tenemos que poner lo de que cambie la posicion
-                // Mirar si se puede hacer con hammer js o como el buranzaga tiene codigo de esto tmb (pero para raton, no tactil)
+                
                 var element = document.getElementById('goo');
                 var hammertime = Hammer(element).on("touch", function(ev) {
                     ev.gesture.preventDefault()
                     isClicking = true;
                     //Creamos el rayo para determinar el punto donde tocamos
-                    //Esto me lo he copiado de buranzaga tmb
                     goo.viewCam.cameraComponent.camera.getPickRay(
                         ev.gesture.center.pageX,
                         ev.gesture.center.pageY,
@@ -246,8 +239,8 @@ require([
                 hammertime.on('release', function(){
                     isClicking = false;
                 });
-                
-                
+
+
 				goo.startGameLoop();
 
 			}).then(null, function(e) {
@@ -261,20 +254,79 @@ require([
 	init();
 });
 
-//Cosas utiles
-/* var scripts = new ScriptComponent();
-    scripts.scripts.push({run:function(entity, tpf){
-       entity.transformComponent.setTranslation( -18-(20*tpf), 0, 21);
-    }});
-    goonEntity.setComponent(scripts); */
- //obtenemos Las coordenadas del bicho en funcion a la pantalla
-                       /*  var goonCoordinates = goo.viewCam.cameraComponent.camera.getScreenCoordinates(
-                            goonEntity.transformComponent.transform.translation,
-                            goo.renderer.viewportWidth,
-                            goo.renderer.viewportHeight
-                        ); */
+//UTILS
+/*
+//Add a function that executes every game loop
+ goo.callbacks.push(function() {
+    //Whatever
+});
+
+*/
+
+/* 
+//Add a function that executes every loop to a entity
+var scripts = new ScriptComponent();
+scripts.scripts.push({run:function(entity, tpf){
+   entity.transformComponent.setTranslation( -18-(20*tpf), 0, 21);
+}});
+goonEntity.setComponent(scripts); 
+*/
+ 
+/*  
+//Get screen coordinates based on camera perspective (x,y coordinates)
+var goonCoordinates = goo.viewCam.cameraComponent.camera.getScreenCoordinates(
+    goonEntity.transformComponent.transform.translation,
+    goo.renderer.viewportWidth,
+    goo.renderer.viewportHeight
+); 
+*/
                         
 /*
+//Disable camera
 var cam = loader.getCachedObjectForRef('entities/DefaultToolCamera.entity');
-                cam.scriptComponent.scripts = [];*/
-       /*goonEntity.transformComponent.setScale(1.1,1.1,1.1) */
+cam.scriptComponent.scripts = [];
+*/
+
+/*
+//Change size
+goonEntity.transformComponent.setScale(1.1,1.1,1.1) 
+*/
+/*
+//Swittching cameras
+if (cameraEntity && cameraEntity.cameraComponent) {
+    SystemBus.emit('goo.setCurrentCamera', {
+        camera: cameraEntity.cameraComponent.camera,
+        entity: cameraEntity
+    });
+}
+*/
+
+/*
+//Get the ray that is a line from the camera to the point you click
+goo.viewCam.cameraComponent.camera.getPickRay(
+        click.x,
+        click.y,
+        goo.renderer.viewportWidth,
+        goo.renderer.viewportHeight,
+        goo.ray
+    );
+*/
+
+/*
+// Use the picking system to check if a ray intersects with something
+//Import 'goo/entities/systems/PickingSystem',  'goo/picking/PrimitivePickLogic',
+
+var picking = new PickingSystem({pickLogic: new PrimitivePickLogic()});
+goo.world.setSystem(picking); 
+
+goo.castRay = function(ray, mask, all){
+    picking.pickRay = ray;
+    picking.mask = mask;
+    picking.all = all;
+    picking._process();
+    //return picking.hit;
+};
+picking.onPick(function(result){
+
+});
+*/
