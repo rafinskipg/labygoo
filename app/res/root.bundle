@@ -13064,7 +13064,7 @@
                 "parentRef": "goon_bind_1/entities/goon_grp.entity",
                 "rotation": [
                     0,
-                    0,
+                    180,
                     0
                 ],
                 "scale": [

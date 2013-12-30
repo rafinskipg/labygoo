@@ -133,7 +133,7 @@ require([
             //Prevent modifying the ray object
             Object.freeze(goo.castRay);
             
-            goo.world.process();
+            
 			// The loader takes care of loading the data
 			var loader = new DynamicLoader({
 				world: goo.world,
@@ -175,28 +175,67 @@ require([
                     createBonus(1, bonusTex);
                 }
                 
-   
+                goo.world.process();
                 //Obtenemos la entidad del muñeco, del fichero root.bundle
                 var goonEntity = loader.getCachedObjectForRef('goon_bind_1/entities/RootNode.entity');
+                var goonMesh = loader.getCachedObjectForRef('goon_bind_1/entities/goon_mesh_0.entity');
+                var entities = goo.world.getEntities();
+                console.log('entities: ', entities);
                 var scripts = new ScriptComponent();
                 scripts.scripts.push({run:function(entity, tpf){
                    if(isClicking && intersectionWithFloor){
                         
+                        
+                        
+                        entity.animationComponent.transitionTo(entity.animationComponent.getStates()[1]);
+                        
                         var trans = entity.transformComponent.transform.translation;
+                        var oldX = trans.x;
+                        var oldZ = trans.z;
+                        var desviacionX, desviacionZ;
+                        /* if(trans.x == intersectionWithFloor.x && trans.z == intersectionWithFloor.z){
+                            return false;
+                        } */
                         if(trans.x < intersectionWithFloor.x){
                             trans.x +=  goo.world.tpf * 15;
+                            if(trans.x > intersectionWithFloor.x){
+                                trans.x = oldX;
+                            }
+                            desviacionX = -1;
                         }else if(trans.x > intersectionWithFloor.x){
                             trans.x -=  goo.world.tpf * 15;
+                            desviacionX = 1;
+                            if(trans.x < intersectionWithFloor.x){
+                                trans.x = oldX;
+                            }
                         }
                         if(trans.z < intersectionWithFloor.z){
                             trans.z += goo.world.tpf * 15;
+                            desviacionZ = -1;
+                            if(trans.z > intersectionWithFloor.z){
+                                trans.z = oldZ;
+                            }
                         }else if(trans.z > intersectionWithFloor.z){
                             trans.z -=  goo.world.tpf * 15;
+                            desviacionZ = 1;
+                            if(trans.z < intersectionWithFloor.z){
+                                trans.z = oldZ;
+                            }
                         } 
-                        console.log(entity);
                         
-                        entity.animationComponent.transitionTo(entity.animationComponent.getStates()[1]);
-                        entity.transformComponent.lookAt(intersectionWithFloor,new Vector3(0,1,0));
+                        var look = new Vector3(intersectionWithFloor.x - desviacionX  * 14,intersectionWithFloor.y,intersectionWithFloor.z - desviacionZ  * 14);
+                        entity.transformComponent.lookAt(look,new Vector3(0,1,0));
+                        for(var i = 0; i<entities.length;i++){
+                            if(entities[i].name.indexOf('Box') != -1){
+                                if(goonMesh.meshRendererComponent.worldBound.intersects(entities[i].meshRendererComponent.worldBound)){
+                                console.log(trans.x); console.log(oldX);
+                                    trans.x = oldX + desviacionX  * 0.5;
+                                    
+                                    trans.z = oldZ+ desviacionZ  * 0.5;
+                                }
+                            
+                            }
+                        }
                        //console.log(entity.meshRendererComponent.worldBound.intersects);
                         //goonEntity.transformComponent.transform.translation.lerp(new Vector3(intersectionWithFloor.x,0,intersectionWithFloor.z ), goo.world.tpf*5);
                         // update the new transforms
