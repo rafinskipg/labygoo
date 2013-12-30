@@ -225,13 +225,14 @@ require([
                         
                         var look = new Vector3(intersectionWithFloor.x - desviacionX  * 14,intersectionWithFloor.y,intersectionWithFloor.z - desviacionZ  * 14);
                         entity.transformComponent.lookAt(look,new Vector3(0,1,0));
+                        //Check colision
                         for(var i = 0; i<entities.length;i++){
                             if(entities[i].name.indexOf('Box') != -1){
                                 if(goonMesh.meshRendererComponent.worldBound.intersects(entities[i].meshRendererComponent.worldBound)){
                                 console.log(trans.x); console.log(oldX);
-                                    trans.x = oldX + desviacionX  * 0.5;
+                                    trans.x = oldX + desviacionX  * 1;
                                     
-                                    trans.z = oldZ+ desviacionZ  * 0.5;
+                                    trans.z = oldZ+ desviacionZ  * 1;
                                 }
                             
                             }
